@@ -1,0 +1,69 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cookbook</title>
+<link rel="stylesheet" href="public/assets/css/foundation.css">
+<link rel="stylesheet" href="public/assets/css/app.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<header>
+  <div data-sticky-container>
+    <div class="top-bar" id="responsive-menu" style="border: 0px white;">
+      <div class="top-bar-left">
+        <a href="#0" style="color:black;">Site Logo/Cookbook Home</a>
+      </div>
+      <div class="top-bar-right">
+        <li class="menu">
+          <a href="#0">Recipe Book</a>
+          <a href="#0">Nutrition Search</a>
+        </li>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- HEADING -->
+<div class="callout medium">
+<div class="text-center">
+<h1>Nutrition Search</h1>
+<h4 class="subheader">Use the form below to search for the nutrition information of an ingredient</h4>
+</div>
+</div>
+
+<!--Search Form  -->
+<div class="grid-x grid-padding-x">
+  <div class="large-12 cell">
+  <div class="card" style="vertical-align: auto;">
+      <div class="card-header text-white" style="background-color:grey; color:white;">
+          <i class="fas fa-th-list"></i> Nutrition Search
+      </div>
+      <div class="card-section">
+          <form>
+              <div class="form-group">
+                  <label for="search-input">Ingredient Name:</label>
+                  <input id="search-input" class="form-control form-fields" type="search"
+                      placeholder="Ex: Egg">
+              </div>
+              <button id="submit-search" class="btn btn-secondary mr-3 my-2" type="submit"><i
+                      class="fas fa-search"></i>
+                  Submit</button>
+              <button id="clear-results" class="btn btn-secondary my-2" type="clear"><i
+                      class="far fa-trash-alt"></i> Clear
+                  Results</button>
+          </form>
+      </div>
+  </div>
+  </div>
+</div>
+
+<script src="public/assets/js/vendor/jquery.js"></script>
+<script src="public/assets/js/vendor/what-input.js"></script>
+<script src="public/assets/js/vendor/foundation.js"></script>
+<script src="public/assets/js/app.js"></script>
+</body>
+</html>
