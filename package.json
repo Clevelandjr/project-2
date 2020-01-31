@@ -1,7 +1,7 @@
 {
-  "name": "eslint-example",
+  "name": "project-2",
   "version": "1.0.0",
-  "description": "Eslint Example",
+  "description": "Food App",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -9,7 +9,12 @@
     "test": "npm run lint"
   },
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.17.1",
+    "https": "^1.0.0",
+    "mysql2": "^2.1.0",
+    "require": "^2.4.20"
+  },
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.18.0"
