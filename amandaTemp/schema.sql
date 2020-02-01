@@ -1,2 +1,0 @@
-DROP DATABASE IF EXISTS `recipe`;
-CREATE DATABASE `recipe`;
