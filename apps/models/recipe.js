@@ -31,3 +31,5 @@ Recipe.sync();
 
 // Makes the Character Model available for other files (will also create a table)
 module.exports = Recipe;
+
+
