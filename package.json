@@ -11,9 +11,14 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.0",
     "https": "^1.0.0",
+    "morgan": "^1.9.1",
     "mysql2": "^2.1.0",
-    "require": "^2.4.20"
+    "require": "^2.4.20",
+    "sequelize": "^5.21.3",
+    "y": "^0.3.2"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
