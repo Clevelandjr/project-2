@@ -5,8 +5,9 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cookbook</title>
-<link rel="stylesheet" href="public/assets/css/foundation.css">
-<link rel="stylesheet" href="public/assets/css/app.css">
+<link rel="stylesheet" href="css/foundation.css">
+<script src="https://code.jquery.com/jquery.js"></script>
+<link rel="stylesheet" href="css/app.css">
 </head>
 <body>
 
@@ -15,12 +16,12 @@
   <div data-sticky-container>
     <div class="top-bar" id="responsive-menu" style="border: 0px white;">
       <div class="top-bar-left">
-        <a href="#0" style="color:black;">Site Logo/Cookbook Home</a>
+        <a href="/" style="color:black;">Site Logo/Cookbook Home</a>
       </div>
       <div class="top-bar-right">
         <li class="menu">
-          <a href="#0">Recipe Book</a>
-          <a href="#0">Nutrition Search</a>
+          <a href="/view">Recipe Book</a>
+          <a href="/nutrition">Nutrition Search</a>
         </li>
       </div>
     </div>
@@ -38,23 +39,25 @@
 <!-- Submit and Search Buttons for Main Homepage -->
 <div class="grid-x grid-padding-x">
   <div class="large-6 medium-6  small-6 cell">
-      <a class="expanded secondary button align-center" href="#0" style="height:30vh; margin-left: 5vw; width: 35vw">
+      <a class="expanded secondary button align-center" href="/view" style="height:30vh; margin-left: 5vw; width: 35vw">
         <h2>Create, Store, and Search Recipes</h2>
         <h4>click here</h4>
       </a>
   </div>
   <div class="large-6 medium-6 small-6 cell">
-      <a class="expanded secondary button align-center" href="#0" style="height:30vh; margin-left: 5vw; width: 35vw">
+      <a class="expanded secondary button align-center" href="/nutrition" style="height:30vh; margin-left: 5vw; width: 35vw">
         <h2>Search Nutritional Information</h2>
         <h4>click here</h4>
       </a>
   </div>
 </div>
 
+<!-- Custom Script -->
+<script src="js/view.js" type="text/javascript"></script>
 
-<script src="public/assets/js/vendor/jquery.js"></script>
-<script src="public/assets/js/vendor/what-input.js"></script>
-<script src="public/assets/js/vendor/foundation.js"></script>
-<script src="public/assets/js/app.js"></script>
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/what-input.js"></script>
+<script src="js/vendor/foundation.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
