@@ -1,1 +1,1 @@
-# project-2-template
+# project-2

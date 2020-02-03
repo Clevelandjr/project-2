@@ -1,24 +1,14 @@
 {
-  "name": "cookbook",
+  "name": "project-2",
   "version": "1.0.0",
-  "description": "Recipe App",
+  "description": "Food App",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "lint": "eslint **/*.js --quiet",
     "test": "npm run lint"
   },
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": ""
-  },
-  "homepage": "",
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
@@ -31,8 +21,6 @@
     "y": "^0.3.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.1",
-    "sequelize-cli": "^5.5.1",
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.18.0"
   }
