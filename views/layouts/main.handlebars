@@ -1,0 +1,63 @@
+{{!-- Primary layout page for heading and footer --}}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Recipe Share</title>
+  <script src="http://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <link rel="stylesheet" href="../../public/assets/css/app.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <img src="./assets/images/bookLogo.png" width="50" height="28">
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+    <div class="navbar-end">
+      <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a href="nutrition" class="navbar-item">
+        Nutrition App
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Recipe Book
+        </a>
+
+        <div class="navbar-dropdown">
+          <a href="todos" class="navbar-item">
+            Create a Recipe
+          </a>
+          <a href="all" class="navbar-item">
+            View All Recipes
+          </a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</nav>
+
+  {{{ body }}}
+</body>
+
+</html>

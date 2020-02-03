@@ -1,0 +1,22 @@
+{{!-- Partial page for adding recipes --}}
+
+<h1 style="background-color: grey; color: white; width: 50vw;">Create a Recipe!</
+h1>
+
+<form id="create-todo">
+  <input id="title" type="text" name="title" placeholder="Recipe Name" autofocus>
+  <button>Create Recipe</button>
+</form>
+
+<ul style="background-color: grey; color: white; width: 50vw;">
+  {{#each todos}}
+  <li data-id="{{id}}"><input class="complete" type="checkbox" name="isCompleted" value="true" {{#if isCompleted}}
+      Recipe added!
+  {{/if}}>
+  {{title}} [<a href="#" class="destroy">X</a>]</li>
+  {{else}}
+  <li>No Recipes</li>
+  {{/each}}
+</ul>
+
+<script src="/assets/js/todos.js"></script>
