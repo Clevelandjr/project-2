@@ -1,15 +1,19 @@
-{{!-- This page is an example placeholder. Will need to have a search input and output for searching 
-the nutritional information of an ingredient --}}
+{{!-- This page is an example placeholder. If you do not want the destroy option, feel free to remove it--}}
 
-<h1 style="background-color: grey; color: white; width: 50vw;">Find the Nutritional Information of an Ingredient!</h1>
+{{!-- DIV FOR WHOLE VIEW CARD --}}
+<div class="container" style="background-color: grey; color: white; width: 50vw;">
 
-<form id="search-ingredient">
-  <input id="ingredient" type="text" name="title" placeholder="Ingredient Name" autofocus>
+{{!-- BUTTON HEADER FOR SEARCH CARD --}}
+<div class="card" style="vertical-align: auto;">
+<div class="card-header" style="background-color:grey; color:white;">
+<form id="search-nutrition">
+  <input id="nutrition" type="text" name="title" placeholder="Ingredient Name" autofocus>
   <button>Ingredient Search</button>
 </form>
-
+</div>
+<div class="card-body" id="nutritional-search">
 <ul style="background-color: grey; color: white; width: 50vw;">
-  {{#each ingredient}}
+  {{#each nutrition}}
   <li data-id="{{id}}"><input class="complete" type="checkbox" name="isCompleted" value="true" {{#if isCompleted}}
       Here is the nutritional information!
   {{/if}}>
@@ -18,5 +22,7 @@ the nutritional information of an ingredient --}}
   <li>No Nutritional Information Found</li>
   {{/each}}
 </ul>
+</div>
+</div>
 
 <script src="/assets/js/todos.js"></script>

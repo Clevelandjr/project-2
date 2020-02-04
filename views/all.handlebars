@@ -1,17 +1,58 @@
-{{!-- Page for either viewing or searching for recipes depending on what we can get done --}}
+{{!-- Page for either viewing or searching for recipes depending on what we can get done 
+reference for restyling button inputs: https://bulma.io/documentation/elements/button/
+If you do not want the destroy option, feel free to remove them--}}
 
-<form id="search-recipe">
-  <input id="recipe" type="text" name="title" placeholder="Recipe Name" autofocus>
-  <button>Search Recipes or All Recipes</button>
-</form>
+{{!-- DIV FOR WHOLE VIEW CARD --}}
+<div class="container" style="background-color: grey; color: white; width: 50vw;">
 
+{{!-- BUTTON HEADER FOR SEARCH CARD --}}
+  <div class="card" style="vertical-align: auto;">
+  <div class="card-header" style="background-color:grey; color:white;">
+  <form id="search-recipe">
+  <input class="button" id="viewAll" type="submit" name="viewAll" value="VIEW ALL" autofocus>
+  <select class="select">
+  <option id="viewCat" name="viewCat" value=>View by Category</option>
+  </select>
+  <input class="button" id="viewTime" type="submit" name="viewTime" value="View by Time">
+  </form>
+  <a href="/todos" class="button" type="submit" value="ADD"> ADD </a>
+  </div>
+
+{{!-- AREA FOR RENDERING RESULTS. JS is borrowed from retrieval area in add file and is not set up, 
+so feel free to rewrite and change anything. Not sure how to see to style until we can get results 
+to render, so I will style into a nice horzontal div resembling the example pictureonce we have results 
+rendering in the inputs--}}
+    <div class="card-body" id="recipe-search">
+      <ul>
+        {{#each todos}}
+        <li data-id="{{id}}"><input class="complete" type="checkbox" name="isCompleted" value="true" {{#if isCompleted}}
+            Search Successful! {{/if}}>
+          {{title}} [<a href="#" class="destroy">X</a>]
+          {{category}} [<a href="#" class="destroy">X</a>]
+          {{cookTime}} [<a href="#" class="destroy">X</a>]
+          {{ingredients}} [<a href="#" class="destroy">X</a>]
+          {{!-- Instruct input has button for viewing instructions attatched to it. 
+          Not completely sure how to set up, but we can work through it --}}
+          {{instruct}} [<a href="#" class="destroy">X</a><input class="button" id="viewInstruct" type="submit" name="viewInstruct" value="View">]</li>
+        {{else}}
+        <li>No Recipes</li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>
+
+
+{{!-- INPUT FORM EXAMPLE
 <ul style="background-color: grey; color: white; width: 50vw;">
   {{#each recipe}}
-  <li data-id="{{id}}"><input class="complete" type="checkbox" name="isCompleted" value="true" {{#if isCompleted}}
-      Here is the recipe!
-  {{/if}}>
-  {{title}} [<a href="#" class="destroy">X</a>]</li>
+  <li data-id="{{id}}"><input class="complete" type="checkbox" name="isCompleted" value="true" {{#if isCompleted}} Here
+      is the recipe! {{/if}}>
+    {{title}} [<a href="#" class="destroy">X</a>]</li>
   {{else}}
   <li>No recipe found</li>
   {{/each}}
-</ul>
+</ul> --}}
