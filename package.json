@@ -10,7 +10,6 @@
   },
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.2",
     "express": "^4.17.1",
     "https": "^1.0.0",
     "mysql2": "^2.1.0",
