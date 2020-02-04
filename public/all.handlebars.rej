@@ -1,0 +1,9 @@
+diff a/public/all.handlebars b/public/all.handlebars	(rejected hunks)
+@@ -49,6 +49,7 @@
+               Recipe Database
+           </div>
+           <div class="card-body" id="recipe-section">
++            
+               <!-- Content will go in here -->
+           </div>
+       </div>
