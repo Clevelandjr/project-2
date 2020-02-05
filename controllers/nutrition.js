@@ -28,7 +28,24 @@ axios({
 
 
 
+//////////////////////
+var request = require("request");
 
+var options = {
+  method: 'GET',
+  url: 'https://edamam-edamam-nutrition-analysis.p.rapidapi.com/api/nutrition-data',
+  qs: {ingr: '1 large apple'},
+  headers: {
+    'x-rapidapi-host': 'edamam-edamam-nutrition-analysis.p.rapidapi.com',
+    'x-rapidapi-key': '60474d2006msh95b12633cdbdb6cp14e4e8jsn1a865ef73770'
+  }
+};
+
+request(options, function (error, response, body) {
+	if (error) throw new Error(error);
+
+	console.log(body);
+});
 
 
     ///////////// another way option///
