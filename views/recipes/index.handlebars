@@ -3,7 +3,9 @@ Reference for changing form input types to dropdown, textarea, etc:
 https://bulma.io/documentation/form/general/
 If you do not want the destroy option, feel free to remove them--}}
 
-<div class="container" style="background-color: grey; color: white; width: 50vw;">
+<div class="container" style="background-image: url(./assets/images/mainBackground.jpg); 
+background-position: center center; background-repeat:  no-repeat; background-attachment: fixed; 
+background-size: cover; background-color:grey; color: white; width: 50vw; min-height: calc(100vh - 40px);">
 {{!-- HEADING --}}
 <h1> Create a Recipe!</h1>
 
@@ -23,16 +25,17 @@ If you do not want the destroy option, feel free to remove them--}}
   </div>
   {{!-- COOK TIME --}}
   <div class="field">
-  <label class="label" style="color:white;">Cook Time:</label>
-  <input id="cookTime" type="text" name="cookTime" placeholder="45 minutes">
+  <label class="label" style="color:white;">Cook Time (in minutes):</label>
+  <input id="cookTime" type="number" min="0" max="1000" name="cookTime" placeholder="40">
   </div>
   {{!-- INGREDIENTS Kept as input, but can change to textarea (which will pull the typing interface to 
   the top left corner) or do a drop down for ingredients if we can hook them from the api- 
   https://bulma.io/documentation/form/general/--}}
-  <div class="field">
+  <div class="field" style="width: 30vw;">
   <label class="label" style="color:white;">Ingredients:</label>
-  <input id="ingredients" type="text" name="ingredients" placeholder="" 
-  style="width: 30vw; height: 20vh;">
+   <textarea class="textarea" id="ingredients" type="text" name="ingredients" 
+  placeholder="Carrots, chicken, rice, etc." style="height: 20vh;">
+  </textarea>
   </div>
   {{!-- INSTRUCTIONS --}}
   <div class="field" style="width: 30vw;">

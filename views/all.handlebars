@@ -3,7 +3,9 @@ reference for restyling button inputs: https://bulma.io/documentation/elements/b
 If you do not want the destroy option, feel free to remove them--}}
 
 {{!-- DIV FOR WHOLE VIEW CARD --}}
-<div class="container" style="background-color: grey; color: white; width: 50vw;">
+<div class="container" style="background-image: url(./assets/images/mainBackground.jpg); 
+background-position: center center; background-repeat: no-repeat; background-attachment: fixed; 
+background-size: cover; background-color:grey; color: white; width: 50vw; min-height: calc(100vh - 40px);">
 
 {{!-- BUTTON HEADER FOR SEARCH CARD --}}
   <div class="card" style="vertical-align: auto;">
@@ -12,6 +14,11 @@ If you do not want the destroy option, feel free to remove them--}}
   <input class="button" id="viewAll" type="submit" name="viewAll" value="VIEW ALL" autofocus>
   <select class="select">
   <option id="viewCat" name="viewCat" value=>View by Category</option>
+  <option id="italian" name="italian" value=>Italian</option>
+  <option id="asian" name="asian" value=>Asian</option>
+  <option id="american" name="american" value=>American</option>
+  <option id="indian" name="indian" value=>Indian</option>
+  <option id="mexican" name="mexican" value=>Mexican</option>
   </select>
   <input class="button" id="viewTime" type="submit" name="viewTime" value="View by Time">
   </form>
