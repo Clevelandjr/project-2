@@ -24,7 +24,7 @@ to render, so I will style into a nice horzontal div resembling the example pict
 rendering in the inputs--}}
     <div class="card-body" id="recipe-search">
       <ul>
-        {{#each todos}}
+        {{#each cRecipes}}
         <li data-id="{{id}}"><input class="complete" type="checkbox" name="isCompleted" value="true" {{#if isCompleted}}
             Search Successful! {{/if}}>
           {{title}} [<a href="#" class="destroy">X</a>]

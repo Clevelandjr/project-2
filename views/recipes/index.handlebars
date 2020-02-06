@@ -43,7 +43,7 @@ If you do not want the destroy option, feel free to remove them--}}
   </div>
   {{!-- SUBMIT BUTTON --}}
   <div class="field">
-  <button class="button" autofocus> Create Recipe </button>
+  <button id="create-recipe" class="button" autofocus> Create Recipe </button>
   </div>
   </ul>
 </form>
@@ -51,7 +51,7 @@ If you do not want the destroy option, feel free to remove them--}}
 {{!-- Code for showing added items at bottom of form. We might want to create separate functions,
 or if we leave them combined this way we will want to reduce the destroy button to one--}}
 <ul style="background-color: white; color: black; width: 50vw;">
-  {{#each todos}}
+  {{#each cRecipes}}
   <li data-id="{{id}}"><input class="complete" type="checkbox" name="isCompleted" value="true" {{#if isCompleted}}
       Recipe added!
   {{/if}}>
@@ -59,7 +59,7 @@ or if we leave them combined this way we will want to reduce the destroy button 
   {{category}} [<a href="#" class="destroy">X</a>]
   {{cookTime}} [<a href="#" class="destroy">X</a>]
   {{ingredients}} [<a href="#" class="destroy">X</a>]
-  {{instruct}} [<a href="#" class="destroy">X</a>]</li>
+  {{instructions}} [<a href="#" class="destroy">X</a>]</li>
   {{else}}
   <li>No Recipes</li>
   {{/each}}
