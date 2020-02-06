@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "Bradford321*",
-    "database": "cookbook",
+    "password": "rootroot",
+    "database": "cRecipes",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false

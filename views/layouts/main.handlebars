@@ -19,8 +19,8 @@
 <body>
 
 <div class="hero is-fullheight-with-navbar" style="background-image: url(./assets/images/mainBackground.jpg); 
-background-position: center center; background-repeat:  no-repeat; background-attachment: fixed; 
-background-size: cover; background-color:blue;">
+background-position: center center; background-repeat: no-repeat; background-attachment: fixed; 
+background-size: cover; background-color:grey;">
 
 
   <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -39,20 +39,20 @@ background-size: cover; background-color:blue;">
     <div class="navbar-end">
       <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <a href="nutrition" class="navbar-item">
+      <a href="nutrition" class="navbar-item" style="color:rgb(66, 158, 66); font-weight:bold;">
         Nutrition App
       </a>
 
       <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
+        <a class="navbar-link" style="color:rgb(66, 158, 66); font-weight:bold;">
           Recipe Book
         </a>
 
         <div class="navbar-dropdown">
-          <a href="create" class="navbar-item">
+          <a href="create" class="navbar-item" style="color:rgb(66, 158, 66); font-weight:bold;">
             Create a Recipe
           </a>
-          <a href="all" class="navbar-item">
+          <a href="all" class="navbar-item" style="color:rgb(66, 158, 66); font-weight:bold;">
             Search Recipes
           </a>
         </div>
@@ -64,13 +64,14 @@ background-size: cover; background-color:blue;">
 
   {{{ body }}}
 
-
-  <footer class="footer">
-  <div class="content has-text-centered has-background-danger has-text-white-bis">
-    <p>Recipe Share©</p>
-  </div>
- 
-</footer>
+{{!-- WORKING ON CHANGING TO TRANSPARENT --}}
+<div class="footer" style="bottom:0; background-image: url(./assets/images/mainBackground.jpg); 
+  background-position: center center; background-repeat: no-repeat; background-attachment: fixed; 
+  background-size: cover; background-color:grey; padding: 2rem 1rem 4rem !important; height: 5vh; overflow:hidden;">
+  <div class="content has-text-centered has-text-white-bis">
+    <p>© Recipe Share</p>
+  </div> 
+</div>
 
 </body>
 

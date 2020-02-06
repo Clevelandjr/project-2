@@ -22,6 +22,7 @@ app.use(express.static("public"));
 
 // Routes (need to be modified as controllers are added)
 app.use(require("./controllers/htmlController"));
+app.use(require("./controllers/allController"));
 // app.use(require("./controllers/cRecipeController"));
 
 // Synchronize my schema
