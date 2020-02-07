@@ -8,11 +8,19 @@ If you do not want the destroy option, feel free to remove them--}}
 <h1 style="font-family: 'Great Vibes', bold; color: #34a6f1; font-size: 30px;" class="has-text-centered"> Please Create A Recipe Below!</h1>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <form id="create-todo">
 =======
 <form id="create-todo" action="/create" method="POST">
   <ul>
 >>>>>>> b5a9ab475fe647ea94cb75449dd99249869bb31e
+=======
+<form id="create-todo" action="/create" method="POST">
+  <ul>
+=======
+<form id="create-todo">
+>>>>>>> jtc_frontend
+>>>>>>> ab725d847b69acba9556990159543f92da8e6d27
   {{!-- RECIPE NAME --}}
   <div class="field">
   <label class="label" style="color:#34a6f1;"> Input Recipe Name:</label>
@@ -32,12 +40,21 @@ If you do not want the destroy option, feel free to remove them--}}
   {{!-- COOK TIME --}}
   <div class="field">
 <<<<<<< HEAD
+<<<<<<< HEAD
   <label class="label" style="color:#34a6f1;">Cook Time (in minutes):</label>
   <input id="cookTime" type="number" min="0" max="1000" name="cookTime" placeholder="30">
 =======
   <label class="label" style="color:white;">Cook Time (in minutes):</label>
   <input id="cooktime" type="number" min="0" max="1000" name="cooktime" placeholder="40">
 >>>>>>> b5a9ab475fe647ea94cb75449dd99249869bb31e
+=======
+  <label class="label" style="color:white;">Cook Time (in minutes):</label>
+  <input id="cooktime" type="number" min="0" max="1000" name="cooktime" placeholder="40">
+=======
+  <label class="label" style="color:#34a6f1;">Cook Time (in minutes):</label>
+  <input id="cookTime" type="number" min="0" max="1000" name="cookTime" placeholder="30">
+>>>>>>> jtc_frontend
+>>>>>>> ab725d847b69acba9556990159543f92da8e6d27
   </div>
   {{!-- INGREDIENTS Kept as input, but can change to textarea (which will pull the typing interface to 
   the top left corner) or do a drop down for ingredients if we can hook them from the api- 
@@ -49,14 +66,24 @@ If you do not want the destroy option, feel free to remove them--}}
   {{!-- INSTRUCTIONS --}}
   <div class="field" style="width: 30vw;">
 <<<<<<< HEAD
+<<<<<<< HEAD
   <label class="label" style="color:#34a6f1;">Cooking Instructions:</label> 
   <textarea class="textarea" id="instruct" type="text" name="instruct" placeholder="Step 1: Chop ingredients, put in pan, fry, etc." style="height: 30vh;"></textarea>
 =======
+=======
+>>>>>>> ab725d847b69acba9556990159543f92da8e6d27
   <label class="label" style="color:white;">Cooking Instructions:</label> 
   <textarea class="textarea" id="instructions" type="text" name="instructions" 
   placeholder="Chop ingredients, put in pan, fry, etc." style="height: 30vh;">
   </textarea>
+<<<<<<< HEAD
 >>>>>>> b5a9ab475fe647ea94cb75449dd99249869bb31e
+=======
+=======
+  <label class="label" style="color:#34a6f1;">Cooking Instructions:</label> 
+  <textarea class="textarea" id="instruct" type="text" name="instruct" placeholder="Step 1: Chop ingredients, put in pan, fry, etc." style="height: 30vh;"></textarea>
+>>>>>>> jtc_frontend
+>>>>>>> ab725d847b69acba9556990159543f92da8e6d27
   </div>
   {{!-- SUBMIT BUTTON --}}
   <div class="buttons" id="create-recipe">
