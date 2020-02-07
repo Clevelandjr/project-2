@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 $("#create-recipe").on("submit", event => {
   event.preventDefault();
 
@@ -8,10 +8,13 @@ $("#create-recipe").on("submit", event => {
     data: {
       title: $("#title").val().trim(),
     }
-  }).then(newTodo => {
-    location.reload("all");
-  });
+  })
 });
+  // this will need to be uncommented to sent to other page 
+  // .then(newTodo => {
+  //   location.reload("all");
+  // });
+
 
 // $(".complete").on("change", event => {
 //   const id = $(event.target).parent().attr('data-id');
