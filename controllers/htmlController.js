@@ -10,9 +10,9 @@ router.get("/", (req, res) => {
   res.render("index");
 });
 
-router.get("/recipes", (req, res) => {
-  res.render("index");
-});
+
+
+
 
 router.get("/nutrition", (req, res) => {
   res.render("nutrition");

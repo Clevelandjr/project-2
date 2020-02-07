@@ -7,7 +7,12 @@ If you do not want the destroy option, feel free to remove them--}}
 {{!-- HEADING --}}
 <h1 style="font-family: 'Great Vibes', bold; color: #34a6f1; font-size: 30px;" class="has-text-centered"> Please Create A Recipe Below!</h1>
 
+<<<<<<< HEAD
 <form id="create-todo">
+=======
+<form id="create-todo" action="/create" method="POST">
+  <ul>
+>>>>>>> b5a9ab475fe647ea94cb75449dd99249869bb31e
   {{!-- RECIPE NAME --}}
   <div class="field">
   <label class="label" style="color:#34a6f1;"> Input Recipe Name:</label>
@@ -26,8 +31,13 @@ If you do not want the destroy option, feel free to remove them--}}
   </div>
   {{!-- COOK TIME --}}
   <div class="field">
+<<<<<<< HEAD
   <label class="label" style="color:#34a6f1;">Cook Time (in minutes):</label>
   <input id="cookTime" type="number" min="0" max="1000" name="cookTime" placeholder="30">
+=======
+  <label class="label" style="color:white;">Cook Time (in minutes):</label>
+  <input id="cooktime" type="number" min="0" max="1000" name="cooktime" placeholder="40">
+>>>>>>> b5a9ab475fe647ea94cb75449dd99249869bb31e
   </div>
   {{!-- INGREDIENTS Kept as input, but can change to textarea (which will pull the typing interface to 
   the top left corner) or do a drop down for ingredients if we can hook them from the api- 
@@ -38,8 +48,15 @@ If you do not want the destroy option, feel free to remove them--}}
   </div>
   {{!-- INSTRUCTIONS --}}
   <div class="field" style="width: 30vw;">
+<<<<<<< HEAD
   <label class="label" style="color:#34a6f1;">Cooking Instructions:</label> 
   <textarea class="textarea" id="instruct" type="text" name="instruct" placeholder="Step 1: Chop ingredients, put in pan, fry, etc." style="height: 30vh;"></textarea>
+=======
+  <label class="label" style="color:white;">Cooking Instructions:</label> 
+  <textarea class="textarea" id="instructions" type="text" name="instructions" 
+  placeholder="Chop ingredients, put in pan, fry, etc." style="height: 30vh;">
+  </textarea>
+>>>>>>> b5a9ab475fe647ea94cb75449dd99249869bb31e
   </div>
   {{!-- SUBMIT BUTTON --}}
   <div class="buttons" id="create-recipe">
@@ -49,20 +66,24 @@ If you do not want the destroy option, feel free to remove them--}}
 
 {{!-- Code for showing added items at bottom of form. We might want to create separate functions,
 or if we leave them combined this way we will want to reduce the destroy button to one--}}
+<div >
 <ul style="background-color: white; color: black; width: 50vw;">
   {{#each cRecipes}}
-  <li data-id="{{id}}"><input class="complete" type="checkbox" name="isCompleted" value="true" {{#if isCompleted}}
-      Recipe added!
-  {{/if}}>
+  <li>
+  {{title}} 
+  {{category}} 
+  {{cookTime}} 
+  </li>
+  {{/each}}
+</ul>
+</div>
+</div>
+
+<script src="/assets/js/todos.js"></script>
+
+{{!-- 
   {{title}} [<a href="#" class="destroy">X</a>]
   {{category}} [<a href="#" class="destroy">X</a>]
   {{cookTime}} [<a href="#" class="destroy">X</a>]
   {{ingredients}} [<a href="#" class="destroy">X</a>]
-  {{instructions}} [<a href="#" class="destroy">X</a>]</li>
-  {{else}}
-  <li>No Recipes</li>
-  {{/each}}
-</ul>
-</div>
-
-<script src="/assets/js/todos.js"></script>
+  {{instructions}} [<a href="#" class="destroy">X</a>] --}}

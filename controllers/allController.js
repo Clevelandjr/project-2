@@ -16,17 +16,8 @@ router.get("/all", (req, res) => {
         res.status(500).json(err);
       });
   });
-  
-  router.get("/create", (req, res) =>{
-    res.render("recipes/index");
-  })
-  
-  // api side of app page
-  router.get("/nutrition", (req, res) => {
-    res.render("nutrition");
-  });
-  
-  
+
+
   // API calls listed below
   //
   //
