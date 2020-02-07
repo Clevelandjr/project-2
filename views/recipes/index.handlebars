@@ -9,7 +9,7 @@ background-size: cover; background-color:grey; color: white; width: 50vw; min-he
 {{!-- HEADING --}}
 <h1> Create a Recipe!</h1>
 
-<form id="create-todo">
+<form id="create-todo" action="/create" method="POST">
   <ul>
   {{!-- RECIPE NAME --}}
   <div class="field">
@@ -26,7 +26,7 @@ background-size: cover; background-color:grey; color: white; width: 50vw; min-he
   {{!-- COOK TIME --}}
   <div class="field">
   <label class="label" style="color:white;">Cook Time (in minutes):</label>
-  <input id="cookTime" type="number" min="0" max="1000" name="cookTime" placeholder="40">
+  <input id="cooktime" type="number" min="0" max="1000" name="cooktime" placeholder="40">
   </div>
   {{!-- INGREDIENTS Kept as input, but can change to textarea (which will pull the typing interface to 
   the top left corner) or do a drop down for ingredients if we can hook them from the api- 
@@ -40,7 +40,7 @@ background-size: cover; background-color:grey; color: white; width: 50vw; min-he
   {{!-- INSTRUCTIONS --}}
   <div class="field" style="width: 30vw;">
   <label class="label" style="color:white;">Cooking Instructions:</label> 
-  <textarea class="textarea" id="instruct" type="text" name="instruct" 
+  <textarea class="textarea" id="instructions" type="text" name="instructions" 
   placeholder="Chop ingredients, put in pan, fry, etc." style="height: 30vh;">
   </textarea>
   </div>
@@ -53,20 +53,24 @@ background-size: cover; background-color:grey; color: white; width: 50vw; min-he
 
 {{!-- Code for showing added items at bottom of form. We might want to create separate functions,
 or if we leave them combined this way we will want to reduce the destroy button to one--}}
+<div >
 <ul style="background-color: white; color: black; width: 50vw;">
   {{#each cRecipes}}
-  <li data-id="{{id}}"><input class="complete" type="checkbox" name="isCompleted" value="true" {{#if isCompleted}}
-      Recipe added!
-  {{/if}}>
+  <li>
+  {{title}} 
+  {{category}} 
+  {{cookTime}} 
+  </li>
+  {{/each}}
+</ul>
+</div>
+</div>
+
+<script src="/assets/js/todos.js"></script>
+
+{{!-- 
   {{title}} [<a href="#" class="destroy">X</a>]
   {{category}} [<a href="#" class="destroy">X</a>]
   {{cookTime}} [<a href="#" class="destroy">X</a>]
   {{ingredients}} [<a href="#" class="destroy">X</a>]
-  {{instructions}} [<a href="#" class="destroy">X</a>]</li>
-  {{else}}
-  <li>No Recipes</li>
-  {{/each}}
-</ul>
-</div>
-
-<script src="/assets/js/todos.js"></script>
+  {{instructions}} [<a href="#" class="destroy">X</a>] --}}
