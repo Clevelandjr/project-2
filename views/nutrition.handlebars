@@ -1,17 +1,13 @@
 {{!-- This page is an example placeholder. If you do not want the destroy option, feel free to remove it--}}
 
 {{!-- DIV FOR WHOLE VIEW CARD --}}
-<div class="container" style="background-image: url(./assets/images/mainBackground.jpg); 
-background-position: center center; background-repeat:  no-repeat; background-attachment: fixed; 
-background-size: cover; background-color:grey; color: white; width: 50vw; min-height: calc(100vh - 40px);">
+<div >
 
 {{!-- BUTTON HEADER FOR SEARCH CARD --}}
 <div class="card" style="vertical-align: auto;">
-<div class="card-header" style="background-color:grey; color:white;">
-<form id="search-nutrition">
+<div class="card-header" id="search-nutrition" style="background-color:grey; color:white;">
   <input id="nutrition" type="text" name="title" placeholder="Ingredient Name" autofocus>
-  <button>Ingredient Search</button>
-</form>
+  <span class="button is-info" id="">Search</span>
 </div>
 <div class="card-body" id="nutritional-search">
 <ul style="background-color: grey; color: white; width: 50vw;">

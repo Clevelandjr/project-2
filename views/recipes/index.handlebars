@@ -3,52 +3,65 @@ Reference for changing form input types to dropdown, textarea, etc:
 https://bulma.io/documentation/form/general/
 If you do not want the destroy option, feel free to remove them--}}
 
-<div class="container" style="background-image: url(./assets/images/mainBackground.jpg); 
-background-position: center center; background-repeat:  no-repeat; background-attachment: fixed; 
-background-size: cover; background-color:grey; color: white; width: 50vw; min-height: calc(100vh - 40px);">
+<div>
 {{!-- HEADING --}}
-<h1> Create a Recipe!</h1>
+<h1 style="font-family: 'Great Vibes', bold; color: #34a6f1; font-size: 30px;" class="has-text-centered"> Please Create A Recipe Below!</h1>
 
+<<<<<<< HEAD
 <form id="create-todo" action="/create" method="POST">
   <ul>
+=======
+<form id="create-todo">
+>>>>>>> jtc_frontend
   {{!-- RECIPE NAME --}}
   <div class="field">
-  <label class="label" style="color:white;">Recipe Name:</label>
-  <input id="title" type="text" name="title" placeholder="Recipe Name"></li>
+  <label class="label" style="color:#34a6f1;"> Input Recipe Name:</label>
+  <input id="title" type="text" name="title" placeholder="Recipe Name" id="inputBoxs">
   </div>
   {{!-- CATEGORY --}}
   <div class="field">
-  <label class="label" style="color:white;">Category:</label>
-  <select class="select">
-  <option id="category" type="text" name="category" placeholder="Italian">Italian</option>
+  <label class="label" style="color:#34a6f1;">Category:</label>
+  <select class="select" id="category" type="text" name="category">
+  <option>Italian</option>
+  <option>American</option>
+  <option>Asian</option>
+  <option>Mexican</option>
+  <option>Indian</option>
   </select>
   </div>
   {{!-- COOK TIME --}}
   <div class="field">
+<<<<<<< HEAD
   <label class="label" style="color:white;">Cook Time (in minutes):</label>
   <input id="cooktime" type="number" min="0" max="1000" name="cooktime" placeholder="40">
+=======
+  <label class="label" style="color:#34a6f1;">Cook Time (in minutes):</label>
+  <input id="cookTime" type="number" min="0" max="1000" name="cookTime" placeholder="30">
+>>>>>>> jtc_frontend
   </div>
   {{!-- INGREDIENTS Kept as input, but can change to textarea (which will pull the typing interface to 
   the top left corner) or do a drop down for ingredients if we can hook them from the api- 
   https://bulma.io/documentation/form/general/--}}
   <div class="field" style="width: 30vw;">
-  <label class="label" style="color:white;">Ingredients:</label>
-   <textarea class="textarea" id="ingredients" type="text" name="ingredients" 
-  placeholder="Carrots, chicken, rice, etc." style="height: 20vh;">
-  </textarea>
+  <label class="label" style="color:#34a6f1;">Ingredients:</label>
+   <textarea class="textarea" id="ingredients" type="text" name="ingredients" placeholder="2 lbs. Carrots, 1 chicken, 2 cups rice, etc." style="height: 20vh;"></textarea>
   </div>
   {{!-- INSTRUCTIONS --}}
   <div class="field" style="width: 30vw;">
+<<<<<<< HEAD
   <label class="label" style="color:white;">Cooking Instructions:</label> 
   <textarea class="textarea" id="instructions" type="text" name="instructions" 
   placeholder="Chop ingredients, put in pan, fry, etc." style="height: 30vh;">
   </textarea>
+=======
+  <label class="label" style="color:#34a6f1;">Cooking Instructions:</label> 
+  <textarea class="textarea" id="instruct" type="text" name="instruct" placeholder="Step 1: Chop ingredients, put in pan, fry, etc." style="height: 30vh;"></textarea>
+>>>>>>> jtc_frontend
   </div>
   {{!-- SUBMIT BUTTON --}}
-  <div class="field">
-  <button id="create-recipe" class="button" autofocus> Create Recipe </button>
-  </div>
-  </ul>
+  <div class="buttons" id="create-recipe">
+  <span class="button is-info">Save and continue</span>
+</div>
 </form>
 
 {{!-- Code for showing added items at bottom of form. We might want to create separate functions,
