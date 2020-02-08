@@ -1,10 +1,8 @@
+{{!-- Page for either viewing or searching for recipes depending on what we can get done --}}
 {{!-- Page for either viewing or searching for recipes depending on what we can get done 
 reference for restyling button inputs: https://bulma.io/documentation/elements/button/
 If you do not want the destroy option, feel free to remove them--}}
-<br>
-<h1 style="font-family: 'Great Vibes', bold; color: #34a6f1; font-size: 36px;" class="has-text-centered"> Please Enjoy Our Recipes!</h1>
-<p style="color: #34a6f1; font-size: 20px;" class="has-text-centered"> Feel Free To Add Your Own...</p>
-<hr>
+
 {{!-- DIV FOR WHOLE VIEW CARD --}}
 <div>
 
@@ -23,7 +21,7 @@ If you do not want the destroy option, feel free to remove them--}}
   </select>
   <input class="button" id="viewTime" type="submit" name="viewTime" value="View by Time">
   </form>
-  <a href="/todos" class="button" type="submit" value="ADD"> ADD </a>
+  <a href="/recipes" class="button" type="submit" value="ADD"> ADD </a>
   </div>
 
 {{!-- AREA FOR RENDERING RESULTS. JS is borrowed from retrieval area in add file and is not set up, 
@@ -57,6 +55,21 @@ rendering in the inputs--}}
   <li data-id="{{id}}"><input class="complete" type="checkbox" name="isCompleted" value="true" {{#if isCompleted}} Here
       is the recipe! {{/if}}>
     {{title}} [<a href="#" class="destroy">X</a>]</li>
+  {{else}}
+  <li>No recipe found</li>
+  {{/each}}
+</ul> --}}
+{{!-- <form id="search-recipe">
+  <input id="recipe" type="text" name="title" placeholder="Recipe Name" autofocus>
+  <button>Search Recipes or All Recipes</button>
+</form>
+
+<ul style="background-color: grey; color: white; width: 50vw;">
+  {{#each recipe}}
+  <li data-id="{{id}}"><input class="complete" type="checkbox" name="isCompleted" value="true" {{#if isCompleted}}
+      Here is the recipe!
+  {{/if}}>
+  {{title}} [<a href="#" class="destroy">X</a>]</li>
   {{else}}
   <li>No recipe found</li>
   {{/each}}

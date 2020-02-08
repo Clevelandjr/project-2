@@ -1,15 +1,15 @@
 // 'use strict';
-$("#create-recipe").on("submit", event => {
-  event.preventDefault();
+// $("#create-recipe").on("submit", event => {
+//   event.preventDefault();
 
-  $.ajax({
-    url: "/api/post",
-    method: "POST",
-    data: {
-      title: $("#title").val().trim(),
-    }
-  })
-});
+//   $.ajax({
+//     url: "/api/post",
+//     method: "POST",
+//     data: {
+//       title: $("#title").val().trim(),
+//     }
+//   })
+// });
   // this will need to be uncommented to sent to other page 
   // .then(newTodo => {
   //   location.reload("all");

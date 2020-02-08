@@ -1,59 +1,57 @@
 {{!-- Partial page for adding recipes --}}
-<br>
-<h1 style="font-family: 'Great Vibes', bold; color: #34a6f1; font-size: 36px;" class="has-text-centered"> Please Create
-  A Recipe Below!</h1>
-  <hr>
+<h1 style="font-family: 'Great Vibes', bold; color: #34a6f1; font-size: 30px;" class="has-text-centered"> Please Create A Recipe Below!</h1>
 <form id="create-todo">
   {{!-- RECIPE NAME --}}
   <div class="field">
-    <label class="label" style="color:#34a6f1;"> Input Recipe Name:</label>
-    <input id="title" type="text" name="title" placeholder="Recipe Name" autofocus>
+  <label class="label" style="color:#34a6f1;"> Input Recipe Name:</label>
+  <input id="title" type="text" name="title" placeholder="Recipe Name" autofocus>
   </div>
   {{!-- CATEGORY --}}
   <div class="field">
-    <label class="label" style="color:#34a6f1;">Category:</label>
-    <select class="select" id="category" type="text" name="category">
-      <option>Italian</option>
-      <option>American</option>
-      <option>Asian</option>
-      <option>Mexican</option>
-      <option>Indian</option>
-    </select>
+  <label class="label" style="color:#34a6f1;">Category:</label>
+  <select class="select" id="category" type="text" name="category">
+  <option>Italian</option>
+  <option>American</option>
+  <option>Asian</option>
+  <option>Mexican</option>
+  <option>Indian</option>
+  </select>
   </div>
   {{!-- COOK TIME --}}
   <div class="field">
-    <label class="label" style="color:#34a6f1;">Cook Time (in minutes):</label>
-    <input id="cookTime" type="number" min="0" max="1000" name="cookTime" placeholder="30">
+  <label class="label" style="color:#34a6f1;">Cook Time (in minutes):</label>
+  <input id="cookTime" type="number" min="0" max="1000" name="cookTime" placeholder="30">
   </div>
   {{!-- INGREDIENTS Kept as input, but can change to textarea (which will pull the typing interface to 
   the top left corner) or do a drop down for ingredients if we can hook them from the api- 
   https://bulma.io/documentation/form/general/--}}
   <div class="field" style="width: 30vw;">
-    <label class="label" style="color:#34a6f1;">Ingredients:</label>
-    <textarea class="textarea" id="ingredients" type="text" name="ingredients"
-      placeholder="2 lbs. Carrots, 1 chicken, 2 cups rice, etc." style="height: 20vh;"></textarea>
+  <label class="label" style="color:#34a6f1;">Ingredients:</label>
+   <textarea class="textarea" id="ingredients" type="text" name="ingredients" placeholder="2 lbs. Carrots, 1 chicken, 2 cups rice, etc." style="height: 20vh;"></textarea>
   </div>
   {{!-- INSTRUCTIONS --}}
   <div class="field" style="width: 30vw;">
-    <label class="label" style="color:#34a6f1;">Cooking Instructions:</label>
-    <textarea class="textarea" id="instruct" type="text" name="instruct"
-      placeholder="Step 1: Chop ingredients, put in pan, fry, etc." style="height: 30vh;"></textarea>
+  <label class="label" style="color:#34a6f1;">Cooking Instructions:</label> 
+  <textarea class="textarea" id="instruct" type="text" name="instruct" placeholder="Step 1: Chop ingredients, put in pan, fry, etc." style="height: 30vh;"></textarea>
   </div>
-  {{!-- SUBMIT BUTTON --}}
-  <div class="columns is-mobile is-multiline is-centered">
-  <div class="column is-narrow">
-  <button class="button is-info is-rounded">Create Recipe</button>
-  </div>
-  </div>
-</form>
-<ul style="background-color: grey; color: white; width: 50vw;">
+ {{!-- SUBMIT BUTTON --}}
+  <button class="button">Create Recipe</button>
+  </form>
+
+{{!-- FORM OUTPUT --}}
+<h1 style="font-family: 'Great Vibes', bold; color: #34a6f1; font-size: 30px;" class="has-text-centered">
+  Created Recipes:</h1>
+<form>  
+<ul style="background-color: white; color: #34a6f1; width: 50vw; font-weight: bold; font-size: 22px;">
   {{#each todos}}
-  <li data-id="{{id}}"><input class="complete" type="checkbox" name="isCompleted" value="true" {{#if isCompleted}}
-      Recipe added! {{/if}}>
-    {{title}} [<a href="#" class="destroy">X</a>]</li>
+  <li data-id="{{id}}"><input class="complete" type="checkbox" name="isCompleted" value="true" {{#if isCompleted}}</li>
+      <p>Recipe added!</p>
+  {{/if}}>
+  {{title}} [<a href="#" class="destroy">X</a>]</li>
   {{else}}
   <li>No Recipes</li>
   {{/each}}
 </ul>
-<script src="/assets/js/recipe.js"></script>
-Collapse
+</form>
+
+<script src="/assets/js/recipes.js"></script>
