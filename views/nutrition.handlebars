@@ -6,17 +6,19 @@
 {{!-- BUTTON HEADER FOR SEARCH CARD --}}
 <div class="card" style="vertical-align: auto;">
 <div class="card-header" id="search-nutrition" style="background-color:grey; color:white;">
-  <input id="nutrition" type="text" name="title" placeholder="Ingredient Name" autofocus>
-  <span class="button is-info" id="">Search</span>
+  <input id="nutrition" type="text" name="title" placeholder="Ingredient" autofocus>
+  <span class="button is-info" id="searchBTN">Search</span>
 </div>
 <div class="card-body" id="nutritional-search">
 <ul style="background-color: grey; color: white; width: 50vw;">
+  
   {{#each nutrition}}
   <li data-id="{{id}}"><input class="complete" type="checkbox" name="isCompleted" value="true" {{#if isCompleted}}
       Here is the nutritional information!
   {{/if}}>
   {{title}} [<a href="#" class="destroy">X</a>]</li>
   {{else}}
+  <div id="nutritionResult"></div>
   <li>No Nutritional Information Found</li>
   {{/each}}
 </ul>
