@@ -27,6 +27,7 @@ app.use(express.static("public"));
 app.use(require("./controllers/htmlController"));
 app.use(require("./controllers/allController"));
 app.use(require("./controllers/cRecipeController"));
+app.use(require("./controllers/nutritionController"));
 
 // Synchronize my schema
 db.sequelize.sync({ force: process.env.NODE_ENV !== "production" })
