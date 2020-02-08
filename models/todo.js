@@ -19,11 +19,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.BOOLEAN,
       defaultValue: false
     }
-  }});
-
-  ToDo.associate = function (models) {
-    // associations can be defined here
-  };
+  }}, {freezeTableName : true});
 
   return ToDo;
 };
