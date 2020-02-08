@@ -1,7 +1,23 @@
 // 'use strict';
-$("#create-recipe").on("submit", event => {
-  event.preventDefault();
+// $("#create-recipe").on("submit", event => {
+//   event.preventDefault();
 
+<<<<<<< HEAD
+//   $.ajax({
+//     url: "/api/post",
+//     method: "POST",
+//     data: {
+//       title: $("#title").val().trim(),
+//     }
+//   })
+// });
+  // this will need to be uncommented to sent to other page 
+  // .then(newTodo => {
+  //   location.reload("all");
+  // });
+
+
+=======
   $.ajax({
     url: "/api/post",
     method: "POST",
@@ -10,6 +26,7 @@ $("#create-recipe").on("submit", event => {
     }
   })
 });
+>>>>>>> b80c2caf6dab81d4043b52b8d3abd65800d44e03
   // todo
   // event:click on searchButton
   // Get value of input field
@@ -29,6 +46,10 @@ $("#create-recipe").on("submit", event => {
       url: localAPI,
     }).then(function (html) {
 
+<<<<<<< HEAD
+// $(".complete").on("change", event => {
+//   const id = $(event.target).parent().attr('data-id');
+=======
       $('html').html(html);
       
     });
@@ -36,6 +57,7 @@ $("#create-recipe").on("submit", event => {
     event.preventDefault();
     
   });
+>>>>>>> b80c2caf6dab81d4043b52b8d3abd65800d44e03
 
  
    

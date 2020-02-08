@@ -50,3 +50,15 @@ table {
 #inputBoxs {
 	box-shadow: 0px 0px 5px #34a6f1;
 }
+
+#cButtons{
+	height: 150px; width: 250px; border-radius: 20px;
+}
+
+hr{
+	height: 2px;
+	background-color:#34a6f1;
+	border: none;
+}
+
+

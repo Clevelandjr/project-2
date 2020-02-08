@@ -377,16 +377,5 @@ Cover and refrigerate for up to 8 hours.
 Step 3:
 Twenty minutes before serving, cook the rice according to the package directions.
 Step 4:
-Just before serving, stir the cream into the chicken tikka masala. Serve over the rice with the cucumber relish."),
-
-
-
-
-
-
-
-
-
-
-
+Just before serving, stir the cream into the chicken tikka masala. Serve over the rice with the cucumber relish.")
 
