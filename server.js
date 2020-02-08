@@ -28,7 +28,7 @@ app.use(require("./controllers/allController"));
 app.use(require("./controllers/nutritionController"));
 
 // Synchronize my schema
-db.sequelize.sync({ force: process.env.NODE_ENV !== "production" })
+db.sequelize.sync()
   .then(() => {
     app.listen(PORT, () => {
       console.log(`==> Server listening at http://localhost:${PORT}/`);
