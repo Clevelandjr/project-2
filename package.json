@@ -20,11 +20,8 @@
   },
   "homepage": "",
   "dependencies": {
-<<<<<<< HEAD
-=======
     "axios": "^0.19.2",
     "body-parser": "^1.19.0",
->>>>>>> b80c2caf6dab81d4043b52b8d3abd65800d44e03
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "express-session": "^1.17.0",
