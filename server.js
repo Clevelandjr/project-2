@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Routes (need to be modified as controllers are added)
-// app.use(require("./controllers/staticController"));
+app.use(require("./controllers/htmlController"));
 // app.use(require("./controllers/recipesController"));
 // app.use(require("./controllers/allController"));
 // // app.use(require("./controllers/cRecipeController"));
@@ -30,7 +30,7 @@ app.use(express.static("public"));
 // Synchronize my schema
 db.sequelize.sync()
   .then(() => {
-    // app.listen(PORT, () => {
-    //   console.log(`==> Server listening at http://localhost:${PORT}/`);
-    // });
+    app.listen(PORT, () => {
+      console.log(`==> Server listening at http://localhost:${PORT}/`);
+    });
   });
