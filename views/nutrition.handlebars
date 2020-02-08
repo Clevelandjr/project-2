@@ -9,12 +9,14 @@
 
 {{!-- BUTTON HEADER FOR SEARCH CARD --}}
 <div class="card" style="vertical-align: auto;">
-<div class="card-header" id="search-nutrition" style="background-color:grey; color:white;">
+<div class="card-header" id="search-nutrition" style="font-family: 'Great Vibes', bold; color: #34a6f1;">
   <input id="nutrition" type="text" name="title" placeholder="Ingredient" autofocus>
   <span class="button is-info" id="searchBTN">Search</span>
 </div>
 <div class="card-body" id="nutritional-search">
-<ul style="background-color: grey; color: white; width: 50vw;">
+<h1 style="font-family: 'Great Vibes', bold; color: #34a6f1; font-size: 30px;" class="has-text-centered">
+Nutritional Information:</h1>
+<ul style="color: #34a6f1; width: 50vw;">
   
   {{#each nutrition}}
   <li data-id="{{id}}"><input class="complete" type="checkbox" name="isCompleted" value="true" {{#if isCompleted}}
