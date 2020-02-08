@@ -4,7 +4,7 @@
   "description": "Recipe App",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "lint": "eslint **/*.js --quiet",
     "test": "npm run lint"
   },
