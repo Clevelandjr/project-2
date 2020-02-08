@@ -32,23 +32,26 @@ var zinc = yummy.ZN.quantity
   });
   
   axios.get("nutrition", (req, res) =>{
+    
     res.render("recipes/nutrition");
   });
 
-  axios.post("nutrition", function (req, res){
+  axios.get("cleveland", function (req, res){
+    console.log('testing something right now')''
     // grab request query param || body param
-    // res.render("recipes/nutrition", {});
-    db.Post.create({
-      Calories: calories,
-      Fat: fat,
-      Carbs: carbs,
-      Fiber: fiber,
-      Sugar: sugar,
-      Protien: protien,
-      Sodium: sodium,
-      Calcium: calcium,
-      Iron: iron,
-      Zinc: zinc,
+    //res.render("recipes/nutrition", {});
+    
+    //db.Post.create({
+    //  Calories: calories,
+    //  Fat: fat,
+    // Carbs: carbs,
+    //  Fiber: fiber,
+    //  Sugar: sugar,
+    //  Protien: protien,
+    //  Sodium: sodium,
+    //  Calcium: calcium,
+    //  Iron: iron,
+    //  Zinc: zinc,
       
     }).then(function(results){
       res.json(results);

@@ -18,8 +18,20 @@
   {{/if}}>
   {{title}} [<a href="#" class="destroy">X</a>]</li>
   {{else}}
+  <p>{{ calories }}</p>
+  <p>{{ fat.label }} {{ fat.quantity }}</p>
+  <p>{{ chocdf.label }} {{ chocdf.quantity }}</p>
+  <p>{{ fibtg.label }} {{ fibtg.quantity }}</p>
+  <p>{{ sugar.label }} {{ sugar.quantity }}</p>
+  <p>{{ procnt.label }} {{ procnt.quantity }}</p>
+  <p>{{ na.label }} {{ na.quantity }}</p>
+  <p>{{ ca.label }} {{ ca.quantity }}</p>
+  <p>{{ fe.label }} {{ fe.quantity }}</p>
+  <p>{{ zn.label }} {{ zn.quantity }}</p>
+  
+
   <div id="nutritionResult"></div>
-  <li>No Nutritional Information Found</li>
+  
   {{/each}}
 </ul>
 </div>
